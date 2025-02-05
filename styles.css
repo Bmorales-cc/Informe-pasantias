@@ -1,0 +1,101 @@
+:root {
+  --bg-color: #f4f4f9;
+  --text-color: #333;
+  --header-color: #6200ea; /* Color del header en modo claro */
+  --button-bg-color: #6200ea;
+  --button-text-color: white;
+  --button-hover-bg-color: #3700b3;
+}
+
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --header-color: #bb86fc; /* Color del header en modo oscuro (mismo que los botones) */
+  --button-bg-color: #bb86fc;
+  --button-text-color: #121212;
+  --button-hover-bg-color: #9a67ea;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--header-color); /* Usa la variable para el color del header */
+  color: white;
+  padding: 1rem 0;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+  padding: 0 10px;
+}
+
+.button {
+  text-decoration: none;
+  padding: 10px 20px;
+  background: var(--button-bg-color);
+  color: var(--button-text-color);
+  border-radius: 5px;
+  transition: transform 0.2s, background-color 0.3s;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover {
+  transform: scale(1.1);
+  background-color: var(--button-hover-bg-color);
+}
+
+h2 {
+  margin: 0;
+  padding: 10px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.back-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 10px 20px;
+  background: var(--button-bg-color);
+  color: var(--button-text-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.back-button:hover {
+  background-color: var(--button-hover-bg-color);
+}
+
+.chapter-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.navigation-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
